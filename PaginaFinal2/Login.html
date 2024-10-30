@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <h1>WELCOME BACK</h1>
+            <p class="subtext">Welcome back! Please enter your details.</p>
+            <form id="loginForm">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="**********">
+                
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                
+                <a href="#" class="forgot-password">Forgot password</a>
+                
+                <button type="button" id="signInBtn">Sign in</button>
+                
+                <div class="google-sign-in">
+                    <button type="button" id="googleSignInBtn" class="google-button">
+                        <img src="google.png" alt="Google logo">
+                        Sign in with Google
+                    </button>
+                </div>
+                
+                <p id="errorMessage" style="color: red;"></p>
+            </form>
+            <p>Don't have an account? <a href="#"id="signUpLink">Sign up for free!</a></p>
+        </div>
+        
+        <div class="login-image">
+            <img src="IMAGEN LOGIN.png" alt="imagen login">
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Edit profile</h1>
+
+        
+        <div class="profile-pic-container">
+            <img id="profile-pic" src="noah.png" alt="Foto de perfil">
+            <input type="file" id="profile-pic-input" accept="image/*" onchange="loadProfilePicture(event)">
+        </div>
+
+        
+        <form class="profile-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Username">
+
+          
+            <label for="displayname">Display name:</label>
+            <input type="text" id="displayname" placeholder="Display name">
+
+          
+            <label for="description">Description:</label>
+            <textarea id="description" rows="4" placeholder="Description"></textarea>
+
+          
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+        
+            <label for="payment-methods">Payment methods:</label>
+            <select id="payment-methods">
+                <option value="credit-card">Credit card/Debit</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Bank transfer</option>
+            </select>
+
+           
+            <label for="region">Region:</label>
+            <select id="region">
+                <option value="americas">América</option>
+                <option value="europe">Europe</option>
+                <option value="asia">Asia</option>
+                <option value="africa">África</option>
+            </select>
+
+            <a href="categoria.html">
+                <button type="button">Save changes</button>
+        </form>
+    </div>
+
+    <script src="indexx.js"></script>
+</body>
+</html>

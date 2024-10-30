@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="categoria.html">Marketplace</a>
+                <div class="dropdown-content">
+                </div>
+            </li>
+            <li><a href="Login.html">Sign Up</a></li>
+        </ul>
+        <div class="search-cart">
+            <input type="text" id="search-bar" placeholder="Search...">
+            <button class="cart-button">🛒</button>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Rol</h1>
+    </header>
+    
+    <section class="product-section" id="products">
+        <div class="product-card" data-name="Super Mario RPG: Legend of the Seven Stars">
+            <img src="Super Mario rpg.jpeg" alt="Super Mario RPG">
+            <h2>Super Mario RPG: Legend of the Seven Stars</h2>
+            <p>Starting from <span class="price">$40.00</span></p>
+            <a href="detail.html?id=9"> 
+                <button class="buy-button">Buy Now</button>
+            </a>
+        </div>
+        
+        <div class="product-card" data-name="Secret of Mana">
+            <img src="Secret of Mana.jpg" alt="Secret of Mana">
+            <h2>Secret of Mana</h2>
+            <p>Starting from <span class="price">$55.00</span></p>
+            <a href="detail.html?id=10"> 
+                <button class="buy-button">Buy Now</button>
+            </a>
+        </div>
+        
+        <div class="product-card" data-name="Final Fantasy VII">
+            <img src="Final Fantasy VII.jpg" alt="Final Fantasy VII">
+            <h2>Final Fantasy VII</h2>
+            <p>Starting from <span class="price">$67.00</span></p>
+            <a href="detail.html?id=11">
+                <button class="buy-button">Buy Now</button>
+            </a>
+        </div>
+        
+        <div class="product-card" data-name="Chrono Trigger">
+            <img src="Chrono Trigger.png" alt="Chrono Trigger">
+            <h2>Chrono Trigger</h2>
+            <p>Starting from <span class="price">$60.00</span></p>
+            <a href="detail.html?id=12"> 
+                <button class="buy-button">Buy Now</button>
+            </a>
+        </div>
+    </section>
+    
+
+    <script src="data.js"></script>   
+    <script src="product.js"></script> 
+    <script src="index.js"></script>   
+    <script>
+        document.getElementById('search-bar').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const products = document.querySelectorAll('.product-card');
+
+            products.forEach(product => {
+                const productName = product.getAttribute('data-name').toLowerCase();
+                product.style.display = productName.includes(query) ? '' : 'none';
+            });
+        });
+    </script>
+     </section>
+     <footer>
+         <div class="footer-content">
+             <div class="footer-section">
+                 <h3>Contact Us</h3>
+                 <p>Email: support@retrogames.com</p>
+                 <p>Phone: +1 234 567 890</p>
+             </div>
+             <div class="footer-section">
+                 <h3>Follow Us</h3>
+                 <div class="social-icons">
+                     <a href="#" id="facebook-icon"><img src="facebook.png" alt="Facebook"></a>
+                     <a href="#" id="twitter-icon"><img src="twitter.png" alt="Twitter"></a>
+                     <a href="#" id="instagram-icon"><img src="instagram.png" alt="Instagram"></a>
+                 </div>
+             </div>
+             <div class="footer-section">
+                 <h3>Legal</h3>
+                 <a href="#">Privacy Policy</a>
+                 <a href="#">Terms of Service</a>
+             </div>
+         </div>
+         <button id="back-to-top" onclick="scrollToTop()">⬆ Back to Top</button>
+     </footer>
+     <script src="footer.js"></script>
+    
+</body>
+</html>
